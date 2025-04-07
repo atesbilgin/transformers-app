@@ -1,3 +1,4 @@
-Run the command to run the application
+To run the project, run the command :
+docker-compose up --build
 
-> docker-compose up --build
+open the interface in localhost:300
