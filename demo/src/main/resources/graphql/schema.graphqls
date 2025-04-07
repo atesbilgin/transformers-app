@@ -1,0 +1,44 @@
+type Mutation {
+    signup(authData: AuthInput!): AuthPayload
+    login(authData: AuthInput!): AuthPayload
+}
+
+input User {
+    id: ID!
+    email: String!
+    password: String!
+}
+
+
+type AuthPayload {
+    token: String!
+}
+
+input AuthInput {
+    email: String!
+    password: String!
+}
+
+type Query {
+    authors: [Author]
+    getUsers: [UserData!]
+}
+
+type UserData {
+    username: String!
+}
+
+type Author {
+    id: ID!
+    name: String!
+    books: [Book]
+}
+
+type Book {
+    id: ID!
+    title: String!
+    publisher: String
+}
+
+
+
